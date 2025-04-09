@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ayush's Auto Blog</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li {
+      font-size: 1rem;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    nav ul li:hover {
+      color: #ccc;
+    }
+
+    .hero {
+      height: 100vh;
+      background: url(https://i.pinimg.com/736x/9b/6d/60/9b6d60fc79c98082b51e954f1b26e2d2.jpg) no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #ddd;
+    }
+
+    .hero button {
+      padding: 12px 30px;
+      font-size: 1rem;
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      border-radius: 25px;
+    }
+
+    .hero button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .blog-container {
+      padding: 100px 60px;
+      background: #111;
+    }
+
+    .post {
+      margin-bottom: 60px;
+      animation: fadeInUp 1s ease;
+    }
+
+    .post h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 15px;
+    }
+
+    .post p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #ccc;
+    }
+
+    .post img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 25px 0;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .post img:hover {
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      background: #000;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 30px;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      nav ul {
+        gap: 15px;
+      }
+
+      .blog-container {
+        padding: 60px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Ayush's Blog</div>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Blog</li>
+        <li>Cars</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Driven by Passion</h1>
+      <p>Explore the elegance, history, and future of automobiles with Ayush</p>
+      <button>Read My Blog</button>
+    </div>
+  </section>
+
+  <section class="blog-container">
+    <div class="post">
+      <h2>The Evolution of Cars</h2>
+      <div class="meta">By Ayush Kumar | April 9, 2025</div>
+      <img src="https://i.pinimg.com/736x/1e/05/d0/1e05d09c2468a4ca6d43bbaa380479b8.jpg" alt="Oldest Car">
+      <p>The automobile has come a long way since Karl Benz built the first gas-powered car in 1886. From wooden wheels and crank starters to AI-driven electric vehicles, cars have become more than just transportation — they're symbols of culture and progress.</p>
+    </div>
+
+    <div class="post">
+      <h2>Why Mercedes-Benz Inspires Me</h2>
+      <div class="meta">By Ayush Kumar | April 7, 2025</div>
+      <img src="https://i.pinimg.com/736x/f0/55/10/f055102ed1980c52b5f5775e46effc4e.jpg" alt="Mercedes Car">    
+      <p>Mercedes-Benz is more than a car brand — it's a legacy of elegance and innovation. Every detail is engineered for excellence. Their approach inspires my love for design, precision, and user experience, not only in cars but in the software I build too.</p>
+    </div>
+
+    <div class="post">
+      <h2>The Rise of Electric Cars</h2>
+      <div class="meta">By Ayush Kumar | April 1, 2025</div>
+      <img src="https://i.pinimg.com/736x/13/5c/5c/135c5c25b4d6d85c89b4ce238e7f44da.jpg" alt="Tesla Model 3">
+      <p>Electric cars are revolutionizing the auto industry. With instant torque, zero emissions, and high-tech features, EVs are the future. Companies like Tesla, Mercedes EQ, and even startups are redefining performance and sustainability on four wheels.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Ayush Kumar | Designed with ❤️ and inspired by Mercedes-Benz
+  </footer>
+
+</body>
+</html>
